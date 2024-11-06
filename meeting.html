@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Meeting Booking</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type='text/css' href="./css/stylesheet.css">
+  </head>
+
+  <body>
+    <div class="flex items-center justify-center p-10">
+      <form id="meeting-invitation-form" class="flex flex-col gap-4">
+        <h2 class="text-xl text-gray-900 dark:text-white font-bold mb-2">
+          Let&apos;s Talk
+        </h2>
+        <p className="text-green-500 text-md mt-2" id="response-message"/>
+
+        <div
+          class="pt-5 border-t border-gray-200 dark:border-gray-800 flex sm:flex-row flex-col sm:space-x-5 rtl:space-x-reverse"
+        >
+          <div
+            id="datepicker-meeting-date" 
+            class="mx-auto sm:mx-0"
+          ></div>
+          <div
+            class="sm:ms-7 sm:ps-5 sm:border-s border-gray-200 dark:border-gray-800 w-full sm:max-w-[15rem] mt-5 sm:mt-0"
+          >
+            <h3
+              id="selected-date-fmt"
+              class="text-gray-900 dark:text-white text-base font-medium mb-3 text-center"
+            >
+                Select a Date First
+            </h3>
+            <button
+              type="button"
+              data-collapse-toggle="timetable"
+              class="inline-flex items-center w-full py-2 px-5 me-4 justify-center text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              <svg
+                class="w-4 h-4 text-gray-800 dark:text-white me-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              Pick a time
+            </button>
+            <label class="sr-only"> Pick a time </label>
+            <ul id="timetable" class="grid w-full grid-cols-2 gap-2 mt-5">
+                <!-- Timetable entries will be added here -->
+            </ul>
+            <div className="flex justify-center items-center h-32 w-full">
+              <p className="text-lg font-medium dark:text-white" id="no-slot"/>
+            </div>
+      </div>
+        </div>
+        <div class="flex flex-col gap-2">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="john.doe@company.com"
+              required
+            />
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows={4}
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Please Provide Topics For the Discussion..."
+            ></textarea>
+          </div>
+          <div class="flex flex-col gap-2 items-end">
+            <button
+              type="submit"
+              aria-label="Submit"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full md:w-1/4 px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:opacity-50"
+            >
+              Submit
+            </button>
+            <button
+              type="button"
+              aria-label="Reset"
+              class="w-full md:w-1/4 px-5 py-2.5 font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              Reset
+            </button>
+          </div>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script type="text/javascript" src="js/gmeet.js"></script>
+  </body>
+</html>
