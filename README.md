@@ -24,7 +24,7 @@ The development of the page is explained in this [medium article](https://medium
 - The page is simple html and vanilla Javascript
 - The page design is mainly inspired from [Flowbite inline timepicker component](https://flowbite.com/docs/forms/timepicker/#inline-timepicker-buttons)
 - Made with the help of [Tailwind css](https://tailwindcss.com/) in order to get acceptable design
-- The backend is a [Cloudflare workers](https://github.com/fhenri/gmeet-cloudflare-backend) that will integrate with Google Calendar API, you need to configure a Google Service Account and your Google Calendar (see the [article](https://medium.com/@frederic.henri/nextjs-application-to-manage-your-google-calendar-and-your-invites-28dce1707b24) for a step by step guide
+- The backend is a [Cloudflare workers](https://github.com/fhenri/gmeet-cloudflare-backend) that will integrate with Google Calendar API, you need to configure a Google Service Account and your Google Calendar (see the [article](https://medium.com/@frederic.henri/step-by-step-guide-to-create-google-service-account-f8237a02f9a4)) for a step by step guide
 
 
 ## Deployment
